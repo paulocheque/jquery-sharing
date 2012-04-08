@@ -1,0 +1,80 @@
+# JQuery-Sharing
+
+Simple plugin to provide a easy way to add links to share your website.
+
+* Latest Release: 0.2.1
+
+# Example of Usage:
+
+<http://plugins.jquery.com/project/Sharing>
+
+```html
+<div id="my_div"></div>
+
+<script type="text/javascript" src="SOME_DIR/js/jquery.sharing.js"></script>
+
+$('#my_div').Sharing();
+```
+
+Default values:
+* text: 'Sharing: ',
+* links: 'facebook,delicious,googlebookmarks,twitter,orkut,linkedin,digg,yahoo,live',
+* image_dir: '/img/sharing/',
+* url: '', // default is the current url
+* 'image': '', // default is without image. Just some websites support images
+* 'title': '', // default is blank. Just some websites support titles
+
+# ADD NEW WEBSITES
+
+* To add new links you can edit the script or just do it before call the function:
+* PS: use the WEBSITE keyword to identify where your website will be in the url. 
+* PS: use the IMAGE keyword to identify the image used to promote your website.
+* PS: use the TITLE keyword to identify the title of your website. 
+
+```html
+$.fn.Sharing.websites.facebook = { name: 'Facebook', image: 'facebook.gif', link: 'http://www.facebook.com/share.php?u=WEBSITE' };
+$.fn.Sharing.websites.mywebsite = { name: 'MyWebSiteOfSharing', image: 'mysharing.gif', link: 'http://www.example.com/add?u=WEBSITE&img=IMAGE&tt=TITLE' };
+```
+
+Then, it is possible to do this: $('#my_div').Sharing('links': 'facebook,mywebsite');
+
+# CUSTOMIZING
+
+```html
+// Custom values:
+$('#my_div').Sharing({ text: '', 
+					   links: 'facebook,twitter,delicious,googlebookmarks', 
+					   image_dir: '/static/img/sharing/',
+					   url: 'http://baladasusp.com',
+					   image: 'http://baladasusp.com/static/img/logo.jpg',
+					   title: 'Baladas na USP: Veja fotos e videos e fique atento às próximas baladas',
+					});
+
+// If you want to customize the layout with CSS:
+.sharing_text {}
+.sharing_link {}
+.sharing_image {}
+
+// Example:
+.sharing_text { font-weight: bold; font-size: 10px; }
+.sharing_link {}
+.sharing_image { width: 15px; height: 15px; margin-right: 5px; }
+```
+
+# TIPS
+
+* you can use ImageZoom plugin for a nice effect: <http://plugins.jquery.com/project/SimpleImageZoom>
+
+But pay attention with some tricks with:
+* jquery animate automatically put a display: block in the image
+* Webkit browsers load images with width and height 0px in this case
+
+```html
+<script type="text/javascript" src="SOME_DIR/js/jquery.imagezoom.js"></script>
+
+$('#my_div img').ImageZoom();
+```
+
+# Tags
+
+delicious, digg, facebook, Google, network, orkut, share, sharing, social, twitter
