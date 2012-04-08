@@ -2,11 +2,10 @@
 
 Simple plugin to provide a easy way to add links to share your website.
 
+* <http://plugins.jquery.com/project/Sharing>
 * Latest Release: 0.2.1
 
 # Example of Usage:
-
-<http://plugins.jquery.com/project/Sharing>
 
 ```html
 <div id="my_div"></div>
