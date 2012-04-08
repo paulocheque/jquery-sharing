@@ -17,6 +17,7 @@ $('#my_div').Sharing();
 ```
 
 Default values:
+
 * text: 'Sharing: ',
 * links: 'facebook,delicious,googlebookmarks,twitter,orkut,linkedin,digg,yahoo,live',
 * image_dir: '/img/sharing/',
@@ -47,7 +48,7 @@ $('#my_div').Sharing({ text: '',
 					   image_dir: '/static/img/sharing/',
 					   url: 'http://baladasusp.com',
 					   image: 'http://baladasusp.com/static/img/logo.jpg',
-					   title: 'Baladas na USP: Veja fotos e videos e fique atento às próximas baladas',
+					   title: 'Baladas na USP: Veja fotos e videos e fique atento ï¿½s prï¿½ximas baladas',
 					});
 
 // If you want to customize the layout with CSS:
@@ -66,6 +67,7 @@ $('#my_div').Sharing({ text: '',
 * you can use ImageZoom plugin for a nice effect: <http://plugins.jquery.com/project/SimpleImageZoom>
 
 But pay attention with some tricks with:
+
 * jquery animate automatically put a display: block in the image
 * Webkit browsers load images with width and height 0px in this case
 
